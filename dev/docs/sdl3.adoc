@@ -1,0 +1,12 @@
+= SDL3
+
+https://wiki.libsdl.org/SDL3/
+https://wiki.libsdl.org/SDL3/README-migration
+
+https://docs.rs/sdl3/
+https://crates.io/crates/sdl3
+
+https://examples.libsdl.org/SDL3/
+
+== Stash
+

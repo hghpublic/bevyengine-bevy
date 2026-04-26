@@ -1,0 +1,66 @@
+= Issues
+
+
+== error: linking with `cc` failed: exit status: 1
+
+https://dev.to/0xg3rs0n/how-i-solved-the-error-linking-with-cc-failed-in-large-rust-projects-with-mold-kn8
+
+
+----
+sudo apt install mold
+----
+
+https://github.com/rui314/mold
+
+
+rust bevy XSETTINGS Xft options won't reload automatically
+
+
+
+
+
+----
+RUST_BACKTRACE=1 zsh -c 'cargo run'
+RUST_BACKTRACE=1 zsh -c 'cargo run --example breakout'
+RUST_BACKTRACE=full zsh -c 'cargo run --example breakout'
+----
+
+No supported formats for surface
+
+
+
+https://github.com/bevyengine/bevy/issues/18932
+
+old::
+----
+ App::new()
+        .add_event::<StreamEvent>()
+        .add_plugins(DefaultPlugins)
+        .add_systems(Startup, setup)
+        .add_systems(Update, (spawn_text, move_text))
+        .add_systems(FixedUpdate, read_stream)
+        .insert_resource(Time::<Fixed>::from_seconds(0.5))
+        .run();
+----
+
+new::
+----
+use bevy_render::{
+    batching::gpu_preprocessing::{GpuPreprocessingMode, GpuPreprocessingSupport},
+    RenderApp,
+};
+
+//...
+    let mut app = App::new();
+    app.add_event::<StreamEvent>()
+        .add_plugins(DefaultPlugins)
+        .add_systems(Startup, setup)
+        .add_systems(Update, (spawn_text, move_text))
+        .add_systems(FixedUpdate, read_stream)
+        .insert_resource(Time::<Fixed>::from_seconds(0.5));
+    app.sub_app_mut(RenderApp)
+        .insert_resource(GpuPreprocessingSupport {
+            max_supported_mode: GpuPreprocessingMode::None,
+        });
+    app.run();
+----

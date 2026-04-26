@@ -1,0 +1,82 @@
+= inxi
+
+
+----
+$ sudo apt install inxi
+$ inxi
+CPU: 16-core Model N/A (-MCP-) speed: 0 MHz Kernel: 6.12.76-linuxkit aarch64
+Up: 14h 55m Mem: 2.59/7.65 GiB (33.8%) Storage: 3.64 TiB (0.7% used) Procs: 45
+Shell: Zsh inxi: 3.3.38
+----
+
+
+----
+$ inxi -Fzxx                     
+System:
+  Kernel: 6.12.76-linuxkit arch: aarch64 bits: 64 compiler: gcc v: 15.2.0
+  Desktop: Fluxbox v: 1.3.7 dm: N/A Distro: Debian GNU/Linux 13 (trixie)
+Machine:
+  Message: No machine data: try newer kernel. Is dmidecode installed? Try -M
+    --dmidecode.
+CPU:
+  Info: 16-core model: N/A variant: armv8 bits: 64 type: MCP arch: ARMv8
+    rev: 0
+  Speed: N/A min/max: N/A cores: No per core speed data found. bogomips: N/A
+  Features: Use -f option to see features
+Graphics:
+  Message: No PCI device data found.
+  Display: server: X.Org v: 21.1.16 driver: dri: swrast gpu: N/A
+    display-ID: :1 screens: 1
+  Screen-1: 0 s-res: 1920x1049 s-dpi: 96
+  Monitor-1: VNC-0 res: 1920x1049 hz: 60 size: N/A
+  API: EGL v: 1.5 platforms: device: 0 drv: swrast surfaceless: drv: swrast
+    x11: drv: swrast inactive: gbm,wayland
+  API: OpenGL v: 4.5 vendor: mesa v: 25.0.7-2 glx-v: 1.4 direct-render: yes
+    renderer: llvmpipe (LLVM 19.1.7 128 bits) device-ID: ffffffff:ffffffff
+  Info: Tools: api: eglinfo,glxinfo x11: xdriinfo, xdpyinfo, xprop, xrandr
+Audio:
+  Message: No device data found.
+Network:
+  Device-1: Red Hat Virtio 1.0 network driver: virtio-pci v: N/A port: N/A
+    bus-ID: 00:01.0 chip-ID: 1af4:1041
+  IF-ID-1: bonding_masters state: N/A speed: N/A duplex: N/A mac: N/A
+  IF-ID-2: erspan0 state: down mac: <filter>
+  IF-ID-3: eth0 state: up speed: 10000 Mbps duplex: full mac: <filter>
+  IF-ID-4: gre0 state: down mac: <filter>
+  IF-ID-5: gretap0 state: down mac: <filter>
+  IF-ID-6: ip6_vti0 state: down mac: <filter>
+  IF-ID-7: ip6gre0 state: down mac: <filter>
+  IF-ID-8: ip6tnl0 state: down mac: <filter>
+  IF-ID-9: ip_vti0 state: down mac: <filter>
+  IF-ID-10: sit0 state: down mac: <filter>
+  IF-ID-11: tunl0 state: down mac: <filter>
+Drives:
+  Local Storage: total: 3.64 TiB used: 27.19 GiB (0.7%)
+  ID-1: /dev/vda model: N/A size: 3.63 TiB serial: N/A
+  ID-2: /dev/vdb model: N/A size: 623.5 MiB serial: N/A
+Partition:
+  Message: No partition data found.
+Swap:
+  ID-1: swap-1 type: file size: 1024 MiB used: 1020.9 MiB (99.7%) priority: -2
+    file: /var/lib/swap
+Sensors:
+  Src: lm-sensors Message: No sensor data found. Is lm-sensors configured?
+Info:
+  Memory: total: N/A available: 7.65 GiB used: 2.66 GiB (34.7%)
+  Processes: 45 Power: uptime: 14h 56m Init: N/A v: N/A default: graphical
+  Packages: pm: dpkg pkgs: 988 Compilers: gcc: 14.2.0 Shell: Zsh v: 5.9
+    running-in: node inxi: 3.3.38
+----
+
+
+----
+$ inxi -G
+Graphics:
+  Message: No PCI device data found.
+  Display: server: X.Org v: 21.1.16 driver: dri: swrast gpu: N/A
+    resolution: 1920x1049~60Hz
+  API: EGL v: 1.5 drivers: swrast platforms: x11,surfaceless,device
+  API: OpenGL v: 4.5 vendor: mesa v: 25.0.7-2 renderer: llvmpipe (LLVM
+    19.1.7 128 bits)
+  Info: Tools: api: eglinfo,glxinfo x11: xdriinfo, xdpyinfo, xprop, xrandr
+----

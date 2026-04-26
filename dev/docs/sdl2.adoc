@@ -1,0 +1,27 @@
+= SDL2
+
+https://www.libsdl.org/
+
+https://wiki.libsdl.org/SDL2/
+
+https://github.com/libsdl-org/SDL
+
+https://github.com/Rust-SDL2/rust-sdl2
+
+https://docs.rs/sdl2/
+
+https://crates.io/crates/sdl2
+
+== deps
+
+----
+sudo apt install libsdl2-dev
+----
+
+
+== Stash
+
+. https://sunjay.dev/learn-game-dev/opening-a-window.html
+. https://blog.logrocket.com/using-sdl2-bindings-rust/
+. https://blog.fazibear.me/definitive-guide-to-rust-sdl2-and-emscriptem/
+. https://jaredonline.svbtle.com/roguelike-tutorial-in-rust-part-1

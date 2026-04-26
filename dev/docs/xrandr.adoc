@@ -1,0 +1,87 @@
+= xrandr
+
+
+
+----
+$ xrandr --current
+Screen 0: minimum 32 x 32, current 1920 x 1049, maximum 32768 x 32768
+VNC-0 connected 1920x1049+0+0 0mm x 0mm
+   1920x1049     59.96*+
+   1920x1200     59.88  
+   1920x1080     59.96  
+   1600x1200     59.87  
+   1680x1050     59.95  
+   1400x1050     59.98  
+   1360x768      59.80  
+   1280x1024     59.89  
+   1280x960      59.94  
+   1280x800      59.81  
+   1280x720      59.86  
+   1024x768      59.92  
+   800x600       59.86  
+   640x480       59.38  
+----
+
+
+----
+$ xrandr --verbose
+Screen 0: minimum 32 x 32, current 1920 x 1049, maximum 32768 x 32768
+VNC-0 connected 1920x1049+0+0 (0x210) normal (normal) 0mm x 0mm
+        Identifier: 0x3b
+        Timestamp:  45383450
+        Subpixel:   unknown
+        Gamma:      1.0:1.0:1.0
+        Brightness: 0.0
+        Clones:    
+        CRTC:       0
+        CRTCs:      0
+        Transform:  1.000000 0.000000 0.000000
+                    0.000000 1.000000 0.000000
+                    0.000000 0.000000 1.000000
+                   filter: 
+        non-desktop: 0 
+                supported: 0, 1
+  1920x1049 (0x210) 167.000MHz -HSync +VSync *current +preferred
+        h: width  1920 start 2040 end 2240 total 2560 skew    0 clock  65.23KHz
+        v: height 1049 start 1052 end 1062 total 1088           clock  59.96Hz
+  1920x1200 (0x3c) 193.250MHz -HSync +VSync
+        h: width  1920 start 2056 end 2256 total 2592 skew    0 clock  74.56KHz
+        v: height 1200 start 1203 end 1209 total 1245           clock  59.88Hz
+  1920x1080 (0x3d) 173.000MHz -HSync +VSync
+        h: width  1920 start 2048 end 2248 total 2576 skew    0 clock  67.16KHz
+        v: height 1080 start 1083 end 1088 total 1120           clock  59.96Hz
+  1600x1200 (0x3e) 161.000MHz -HSync +VSync
+        h: width  1600 start 1712 end 1880 total 2160 skew    0 clock  74.54KHz
+        v: height 1200 start 1203 end 1207 total 1245           clock  59.87Hz
+  1680x1050 (0x3f) 146.250MHz -HSync +VSync
+        h: width  1680 start 1784 end 1960 total 2240 skew    0 clock  65.29KHz
+        v: height 1050 start 1053 end 1059 total 1089           clock  59.95Hz
+  1400x1050 (0x40) 121.750MHz -HSync +VSync
+        h: width  1400 start 1488 end 1632 total 1864 skew    0 clock  65.32KHz
+        v: height 1050 start 1053 end 1057 total 1089           clock  59.98Hz
+  1360x768 (0x41) 84.750MHz -HSync +VSync
+        h: width  1360 start 1431 end 1567 total 1776 skew    0 clock  47.72KHz
+        v: height  768 start  771 end  781 total  798           clock  59.80Hz
+  1280x1024 (0x42) 109.000MHz -HSync +VSync
+        h: width  1280 start 1360 end 1496 total 1712 skew    0 clock  63.67KHz
+        v: height 1024 start 1027 end 1034 total 1063           clock  59.89Hz
+  1280x960 (0x43) 101.250MHz -HSync +VSync
+        h: width  1280 start 1360 end 1488 total 1696 skew    0 clock  59.70KHz
+        v: height  960 start  963 end  967 total  996           clock  59.94Hz
+  1280x800 (0x44) 83.500MHz -HSync +VSync
+        h: width  1280 start 1352 end 1480 total 1680 skew    0 clock  49.70KHz
+        v: height  800 start  803 end  809 total  831           clock  59.81Hz
+  1280x720 (0x45) 74.500MHz -HSync +VSync
+        h: width  1280 start 1344 end 1472 total 1664 skew    0 clock  44.77KHz
+        v: height  720 start  723 end  728 total  748           clock  59.86Hz
+  1024x768 (0x46) 63.500MHz -HSync +VSync
+        h: width  1024 start 1072 end 1176 total 1328 skew    0 clock  47.82KHz
+        v: height  768 start  771 end  775 total  798           clock  59.92Hz
+  800x600 (0x47) 38.250MHz -HSync +VSync
+        h: width   800 start  832 end  912 total 1024 skew    0 clock  37.35KHz
+        v: height  600 start  603 end  607 total  624           clock  59.86Hz
+  640x480 (0x48) 23.750MHz -HSync +VSync
+        h: width   640 start  656 end  720 total  800 skew    0 clock  29.69KHz
+        v: height  480 start  483 end  487 total  500           clock  59.38Hz
+vscode ➜ /workspaces/bevyengine-bevy (dev/0) $ 
+----

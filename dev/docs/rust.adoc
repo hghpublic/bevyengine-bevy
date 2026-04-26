@@ -1,0 +1,46 @@
+= Rust
+:toc:
+:sectnums:
+ifndef::env-github[:icons: font]
+:note-caption: :paperclip:
+:important-caption: :exclamation:
+:warning-caption: :warning:
+
+Homepage::
+https://rust-lang.org/
+
+Learn::
+https://rust-lang.org/learn/
+
+Playground::
+https://play.rust-lang.org/
+
+
+== Build and Run Examples
+
+[source, shell]
+----
+$ cargo run --example move_sprite > dev/logs/examples/move_sprite.log 2>&1
+$ sudo apt install librust-wayland-sys-dev
+$ sudo apt install librust-libudev-sys-dev
+$ sudo apt install libxkbcommon-x11-dev
+$ sudo apt install mesa-vulkan-drivers
+----
+
+`.cargo/config.toml`::
+----
+[target.'cfg(target_os = "linux")']
+rustflags = ["-C", "link-arg=-fuse-ld=mold"]
+----
+
+== deps
+
+
+https://github.com/bevyengine/bevy/blob/latest/docs/linux_dependencies.md
+
+
+----
+sudo apt-get install g++ pkg-config libx11-dev libasound2-dev libudev-dev libxkbcommon-x11-0
+# optional if you disabled the wayland feature
+sudo apt-get install libwayland-dev libxkbcommon-dev
+----
